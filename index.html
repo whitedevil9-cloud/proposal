@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rudraksh ❤️ Nandini</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    max-width:650px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.2);
+}
+
+h1{
+    font-size:3rem;
+}
+
+p{
+    font-size:1.2rem;
+    line-height:1.7;
+}
+
+button{
+    padding:15px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:40px;
+    margin:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#yes{
+    background:#28a745;
+    color:white;
+}
+
+#yes:hover{
+    transform:scale(1.1);
+}
+
+#no{
+    background:#ff4b5c;
+    color:white;
+    position:absolute;
+}
+
+#final{
+    display:none;
+    animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:scale(.8);}
+to{opacity:1;transform:scale(1);}
+}
+
+.heart{
+    position:fixed;
+    top:-20px;
+    color:white;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div id="start">
+
+<h1>Hi Nandini ❤️</h1>
+
+<p>
+Dear Nandini,
+
+Every day with you has become one of my favorite memories.
+Your smile makes my world brighter, and your presence makes every moment feel special.
+
+I don't know what the future holds,
+but I know I want you to be a part of mine.
+
+❤️
+</p>
+
+<h2>Will you be my forever? 💍</h2>
+
+<button id="yes">YES ❤️</button>
+<button id="no">NO 🤭</button>
+
+</div>
+
+<div id="final">
+
+<h1>❤️ Thank You, Nandini ❤️</h1>
+
+<p>
+
+No matter where life takes us,
+
+I promise to stand beside you,
+
+to make you smile,
+
+to support your dreams,
+
+and to love you with all my heart.
+
+<br><br>
+
+Forever Yours,
+
+<b>Rudraksh ❤️</b>
+
+</p>
+
+<h2>💖 Our Story Starts Here 💖</h2>
+
+</div>
+
+</div>
+
+<script>
+
+const no=document.getElementById("no");
+
+no.addEventListener("mouseover",()=>{
+
+no.style.left=Math.random()*(window.innerWidth-120)+"px";
+
+no.style.top=Math.random()*(window.innerHeight-70)+"px";
+
+});
+
+document.getElementById("yes").onclick=()=>{
+
+document.getElementById("start").style.display="none";
+
+document.getElementById("final").style.display="block";
+
+for(let i=0;i<150;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(15+Math.random()*25)+"px";
+
+h.style.animationDuration=(2+Math.random()*4)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),6000);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
